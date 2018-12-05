@@ -65,7 +65,7 @@ RUN adduser --disabled-password --gecos "" -u ${DEFAULT_USER_UID} jenkins && \
 ENV H2O_BRANCH='master'
 
 # Set required env vars and install Java 8 and Pythons
-COPY ${PATH_PREFIX}/../common/sbin/ scripts/install_java_version scripts/java-*-vars.sh scripts/install_java_versions scripts/install_python_version /usr/sbin/
+COPY ${PATH_PREFIX}/scripts/sbin ${PATH_PREFIX}/../common/sbin/ scripts/install_java_version scripts/java-*-vars.sh scripts/install_java_versions scripts/install_python_version /usr/sbin/
 RUN \
   chmod 700 /usr/sbin/install_java_version && \
   chmod 700 /usr/sbin/install_java_versions && \
