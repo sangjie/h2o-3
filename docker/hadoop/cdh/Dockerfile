@@ -101,7 +101,7 @@ RUN chmod 700 /usr/sbin/startup.sh && \
     sync && \
     /usr/sbin/install_hive.sh
 
-# RUN /usr/sbin/install_ldap.sh
+RUN /usr/sbin/install_ldap.sh
 
 # Expose ports
 # H2O, Hadoop UI, Hive, LDAP
